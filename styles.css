@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Info CSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main id="main-doc">
+        <nav id="navbar">
+          <header>Оглавление</header>
+          <div class="nav__links">
+          <a href="#what_is_css" class="nav-link">What is CSS</a>
+          <a href="#selectors" class="nav-link">Selectors</a>
+          <a href="#margin_padding_border" class="nav-link">Margin Padding Border</a>
+          <a href="#img_css" class="nav-link">Img CSS</a>
+          <a href="#makets" class="nav-link">Makets</a>
+        </div>
+        </nav>
+      <article> 
+      <h1>Краткая сводка о CSS</h1>
+      <section id="what_is_css" class="main-section">
+        <header><h2>What is CSS</h2></header>
+        <p><strong>CSS (Cascading Style Sheets)</strong> — это язык таблиц стилей, который используется для описания внешнего вида веб-страниц. Он позволяет определять стили элементов HTML, таких как шрифты, цвета, отступы и т. д.</p>
+        <pre>
+        <code>
+      .example {
+        color: red; /* Устанавливаем цвет текста */
+      }
+      </code>
+      </pre>
+        <p>История CSS началась в 1994 году с разработки языка Cascading HTML Style Sheets в компании Netscape Communications. В 1996 году была создана первая версия стандарта CSS, которая получила название CSS1. С тех пор стандарт постоянно развивался и дополнялся новыми возможностями. В настоящее время актуальной версией является CSS3.</p>
+      </section>
+      <section  id="selectors" class="main-section">
+        <header><h2>Selectors</h2></header>
+        <p><strong>Селекторы в CSS</strong> — это правила, которые применяются к определённым элементам веб-страницы. Они используются для стилизации HTML-элементов.</p>
+
+<ul> Существует несколько типов селекторов:
+
+<li>Универсальные селекторы (*) — применяются ко всем элементам на странице.</li>
+<li>Селектор элемента (тег) — применяется к конкретному тегу, например, h1 или p. </li>
+<li>ID-селектор (#id) — применяется к элементу с указанным идентификатором. </li>
+<li>Класс-селектор. (.) — применяется к элементам с указанным классом.</li>
+<li>Групповой селектор (элемент1 элемент2) — применяет стиль к нескольким элементам одновременно. </li>
+<li>Дочерний селектор ($element1 > $element2$) — выбирает элементы, являющиеся непосредственными потомками указанного элемента.</li>
+<li>Потомок селектор ($element1 $element2$) — выбирает все элементы, находящиеся внутри указанного элемента на любом уровне вложенности.</li>
+<li>Псевдоклассы (:hover, :active, :focus) — добавляют стили при определённых состояниях элемента, таких как наведение курсора мыши, активация и фокусировка.</li>
+<li>Псевдоэлементы (::before, ::after) — позволяют добавлять контент до или после содержимого элемента.</li>
+</ul>
+      </section>
+      <section id="margin_padding_border" class="main-section">
+        <header><h2>Margin Padding Border</h2></header>
+      <p><strong>Margin</strong> — это расстояние от внешнего края элемента до ближайшего соседнего элемента. Это невидимое пространство, которое используется для создания отступов между элементами на веб-странице.
+
+Пример:
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        margin: 50px; /* Устанавливаем внешний отступ */
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Пример использования margin&lt;/h1&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+В этом примере у блока div установлен внешний отступ в 50 пикселей с помощью свойства margin. </p>
+
+<p><strong>Padding</strong> — это пространство внутри элемента, которое находится между его содержимым и границей. Padding также является невидимым пространством, но оно влияет на размер самого элемента.
+
+Пример:
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div {
+        padding: 30px; /* Устанавливаем внутренний отступ */
+        border: 1px solid black;
+        width: 400px;
+        height: 200px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Пример использования padding&lt;/h1&gt;
+    &lt;div&gt;Текст внутри блока div&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+Здесь у блока div установлено внутреннее заполнение в 30 пикселей с помощью свойства padding.
+
+<p><strong>Border</strong> — это линия, которая окружает элемент. Border может иметь различные стили (сплошная, пунктирная, двойная и т. д.), ширину и цвет.
+
+Пример:
+<pre>
+  <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div {
+         border: 2px solid red; /* Устанавливаем границу */
+        width: 400px;
+        height: 200px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Пример использования border&lt;/h1&gt;
+    &lt;div&gt;Блок div с красной границей&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+      </section>
+      <section id="img_css" class="main-section">
+        <header><h2>Img CSS</h2></header>
+        <p>Для подключения изображений в CSS используется свойство <code>background-image</code>. Оно позволяет установить фоновое изображение для элемента.
+
+Вот пример использования свойства background-image:
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div {
+        background-image: url("image.jpg"); /* Указываем путь к изображению */
+        width: 400px;
+        height: 200px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1>Пример использования background-image&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+</p>
+<p>В этом примере у блока div установлено фоновое изображение с помощью свойства background-image. Путь к изображению указывается относительно файла со стилями (в данном случае это файл style.css).</p>
+      </section>
+      <section id="makets" class="main-section">
+        <header><h2>Makets</h2></header>
+        <p><strong>Макеты в HTML и CSS </strong>— это способ организации элементов веб-страницы, таких как заголовки, абзацы, изображения и другие блоки контента. Макеты определяют структуру и внешний вид страницы, а также её адаптивность под разные размеры экрана.</p>
+
+<p>Существует несколько основных принципов создания макетов:
+  <ol>
+<li> Блочная вёрстка. Это самый распространённый метод, при котором элементы располагаются в виде блоков (div). Блоки могут быть расположены друг под другом, рядом или вложенными друг в друга. Блочная вёрстка позволяет легко управлять размещением элементов на странице и их размерами.</li>
+<li>Флексбокс вёрстка (flexbox). Это более продвинутый метод, который использует свойства flex для управления размещением и размерами элементов. Флексбокс позволяет создавать гибкие макеты, которые адаптируются под разные размеры экрана.</li>
+<li>Грейдерная вёрстка (grid). Этот метод использует свойства grid для создания сетки из колонок и строк. Грейдерная вёрстка также позволяет создавать адаптивные макеты.</li>
+<li>Табличная вёрстка.** Этот метод используется для создания сложных макетов с таблицами и списками. Табличная вёрстка может быть сложной в управлении и не всегда подходит для адаптивных макетов.</li>
+<li>Смешанная вёрстка. В этом случае используются различные методы вёрстки в зависимости от требований к макету. Например, можно использовать блочную вёрстку для основного контента и флексбокс для боковых панелей.</li>
+</ol>
+</p>
+
+<p>Выбор метода вёрстки зависит от сложности макета, требований к адаптивности и других факторов.</p>
+      </section>
+      </article>
+    </main>
+  </body>
+</html>
